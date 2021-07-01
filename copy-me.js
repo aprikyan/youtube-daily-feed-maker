@@ -86,7 +86,7 @@ function getSubscriptions() {
   var nextPageToken = "";
   var ids = [];
   while (nextPageToken != null) {
-    var channels = YouTube.Subscriptions.list('id', {
+    var channels = YouTube.Subscriptions.list(('id', 'snippet'), {
       mine: true,
       pageToken: nextPageToken,
       maxResults: 150
